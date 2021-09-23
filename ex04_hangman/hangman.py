@@ -5,9 +5,10 @@ wordToGuess = english_words[random.randrange(0, len(english_words))]
 splitedWord = list(wordToGuess)
 characterFound = []
 trials = 8
-print(wordToGuess)
+
 print('Welcome to Hangman')
 print(f'the word to guess has {len(wordToGuess)} letters')
+
 def game(trials):
     userInput = input('Choose a character :  ')
     if wordToGuess.count(userInput) != 0 :
@@ -29,4 +30,5 @@ def game(trials):
             print('you lose')
             quit()
         game(trials)
+        
 game(trials)
